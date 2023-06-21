@@ -1,0 +1,13 @@
+{
+    "name": "ahanafi/codepos-app",
+    "authors": [
+        {
+            "name": "Ahmad Hanafi",
+            "email": "Contaminated007@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.14",
+        "dompdf/dompdf": "^1.0"
+    }
+}
