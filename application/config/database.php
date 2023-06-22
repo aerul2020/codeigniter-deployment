@@ -6,6 +6,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	// 'dsn'	=> 'mysql://phgs4f6wf2kwf99izjdj:pscale_pw_n5DdsTFpgMafx2nGBF18kBD2n4IN0XP8FbJ9hinaJZ9@aws.connect.psdb.cloud/absensi?ssl={"rejectUnauthorized":true}&sslcert=cacert.pem',
+	'dsn' => '',
 
 	//HOSTNAME
 	// 'hostname' => 'aws.connect.psdb.cloud',
@@ -27,7 +28,6 @@ $db['default'] = array(
 
 	//NAMA DATABASE
 	'database' => "absensi",
-
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -1,0 +1,174 @@
+==============
+﻿
+Using Nixpacks
+﻿
+==============
+﻿
+﻿
+context: 0f36ae43102e18faf9842b3db9243d11
+﻿
+Warning: No PHP version specified, using PHP 8.2; see https://getcomposer.org/doc/04-schema.md#package-links for how to specify a PHP version.
+﻿
+Warning: No PHP version specified, using PHP 8.2; see https://getcomposer.org/doc/04-schema.md#package-links for how to specify a PHP version.
+﻿
+ 
+﻿
+ 
+﻿
+╔═══════════════════════════════ Nixpacks v1.9.0 ══════════════════════════════╗
+﻿
+║ setup      │ (php82.withExtensions (pe: pe.enabled ++ [])), perl, nginx,     ║
+﻿
+║            │ libmysqlclient, php82Packages.composer                          ║
+﻿
+║──────────────────────────────────────────────────────────────────────────────║
+﻿
+║ install    │ mkdir -p /var/log/nginx && mkdir -p /var/cache/nginx            ║
+﻿
+║            │ composer install --ignore-platform-reqs                         ║
+﻿
+║──────────────────────────────────────────────────────────────────────────────║
+﻿
+║ start      │ perl /assets/prestart.pl /assets/nginx.template.conf            ║
+﻿
+║            │ /nginx.conf && (php-fpm -y /assets/php-fpm.conf & nginx -c      ║
+﻿
+║            │ /nginx.conf)                                                    ║
+﻿
+╚══════════════════════════════════════════════════════════════════════════════╝
+﻿
+ 
+﻿
+ 
+﻿
+#1 [internal] load build definition from Dockerfile
+﻿
+#1 transferring dockerfile: 1.84kB done
+﻿
+#1 DONE 0.0s
+﻿
+ 
+﻿
+#2 [internal] load .dockerignore
+﻿
+#2 transferring context: 2B done
+﻿
+#2 DONE 0.0s
+﻿
+ 
+﻿
+#3 [internal] load metadata for ghcr.io/railwayapp/nixpacks:ubuntu-1684957838
+﻿
+ 
+﻿
+#3 DONE 0.2s
+﻿
+ 
+﻿
+ 
+﻿
+#4 [stage-0  1/10] FROM ghcr.io/railwayapp/nixpacks:ubuntu-1684957838@sha256:eb26a5ad60faad269d01ac896a4eefb5e7987040d39549dbe5d8cdfd1a830b75
+﻿
+#4 DONE 0.0s
+﻿
+ 
+﻿
+#5 [internal] load build context
+﻿
+ 
+﻿
+#5 transferring context: 85.49MB 1.0s done
+﻿
+ 
+﻿
+#5 DONE 1.0s
+﻿
+ 
+﻿
+#6 [stage-0  2/10] WORKDIR /app/
+﻿
+#6 CACHED
+﻿
+ 
+﻿
+#7 [3/9] COPY .nixpacks/nixpkgs-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847.nix .nixpacks/nixpkgs-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847.nix
+﻿
+ 
+﻿
+#7 DONE 0.2s
+﻿
+ 
+﻿
+#8 [4/9] RUN nix-env -if .nixpacks/nixpkgs-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847.nix && nix-collect-garbage -d
+﻿
+ 
+﻿
+#8 21.05 installing '293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847-env'
+﻿
+ 
+﻿
+#8 22.91 these 6 derivations will be built:
+﻿
+#8 22.91   /nix/store/5kf03qklngdx9smqnfh3k81r8yrlm62l-builder.pl.drv
+﻿
+#8 22.91   /nix/store/jg68zk6dghicfmrlr8cncmbqdnn5ghna-libraries.drv
+﻿
+#8 22.91   /nix/store/jhbyk039gbn6z8f93w433ci63jccxqbi-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847-env.drv
+﻿
+#8 22.91   /nix/store/krfzm899cvg3llq5i3c896835i2fz5dh-php-extra-init-8.2.0.ini.drv
+﻿
+#8 22.91   /nix/store/kg0vjsxhczc8cjy1d66mjmax3p3057qk-php-with-extensions-8.2.0.drv
+﻿
+#8 22.91   /nix/store/4an7n9x440qvpcydqrx20dz5334bdjw4-293a28df6d7ff3dec1e61e37cc4ee6e6c0fb0847-env.drv
+﻿
+#8 22.91 these 197 paths will be fetched (89.89 MiB download, 438.97 MiB unpacked):
+﻿
+#8 22.91   /nix/store/dnwi357xww3rxdvr79gbvvs8zqm1x47m-acl-2.3.1
+﻿
+#8 22.91   /nix/store/3nxvwpxmvv5sv2bb88plhs4ys1jl0bmm-attr-2.5.1
+﻿
+#8 22.91   /nix/store/zrbiza1x78gl404fi7l5fjy8803739dd-audit-2.8.5
+﻿
+#8 22.91   /nix/store/4xw8n979xpivdc46a9ndcvyhwgif00hz-bash-5.1-p16
+﻿
+#8 22.91   /nix/store/x40p83k9mk03kklpfahqppp6kz85yx99-bash-interactive-5.1-p16
+﻿
+#8 22.91   /nix/store/yvl8dvaxnqsakz06xqllyaw1h3nbqqa6-bison-3.8.2
+﻿
+#8 22.91   /nix/store/kmigdljiv59kh22jrx5hp0savn2xx3fc-brotli-1.0.9-lib
+﻿
+#8 22.91   /nix/store/kxdyx0dqy8gpx8yp61wybn2dr1va0vn8-bzip2-1.0.8
+
+#8 45.18 20 store paths deleted, 167.34 MiB freed
+﻿
+ 
+﻿
+#8 DONE 45.3s
+﻿
+ 
+﻿
+#9 [5/9] COPY .nixpacks/assets /assets/
+﻿
+#9 DONE 0.0s
+﻿
+ 
+﻿
+#10 [6/9] COPY . /app/.
+﻿
+ 
+﻿
+#10 DONE 0.7s
+﻿
+ 
+﻿
+#11 [7/9] RUN  mkdir -p /var/log/nginx && mkdir -p /var/cache/nginx
+﻿
+ 
+﻿
+#11 DONE 0.4s
+﻿
+ 
+﻿
+ 
+﻿
+#12 [8/9] RUN  composer install --ignore-platform-reqs

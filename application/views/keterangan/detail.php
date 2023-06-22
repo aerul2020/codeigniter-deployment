@@ -34,7 +34,7 @@
                                 <tr>
                                     <td width="240px;">Tanggal</td>
                                     <td>:</td>
-                                    <td><?php echo IDdateFormat $keterangan->tanggal ?></td>
+                                    <td><?php echo IDdateFormat ($keterangan->tanggal) ?></td>
                                 </tr>
                                 <tr>
                                     <td width="240px;">Keterangan</td>
